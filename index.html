@@ -4,14 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free CAZ / ULEZ Case Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #17181a;
-    --panel: #1f2023;
-    --text: #e9e9ea;
-    --muted: #a3a3a8;
-    --accent: #e8a33d;
-    --border: #2c2d30;
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --text: #1d2433;
+    --muted: #5b6472;
+    --accent: #2455c4;
+    --accent-text: #ffffff;
+    --border: #dde1e7;
   }
   * { box-sizing: border-box; }
   body {
@@ -26,6 +30,27 @@
     margin: 0 auto;
     padding: 40px 20px 80px;
   }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .brand-mark {
+    font-family: "Sora", -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .brand-mark span { color: var(--accent); }
+  .brand-tagline {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0 0 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
   h1 {
     font-size: 1.6rem;
     margin: 0 0 16px;
@@ -37,13 +62,13 @@
     margin-bottom: 14px;
   }
   .notice {
-    background: var(--panel);
-    border: 1px solid var(--border);
+    background: #eef3fc;
+    border: 1px solid #d3e0f5;
     border-left: 3px solid var(--accent);
     padding: 14px 16px;
     border-radius: 4px;
     font-size: 0.92rem;
-    color: var(--muted);
+    color: var(--text);
     margin-bottom: 32px;
   }
   form {
@@ -66,7 +91,7 @@
   select, input[type="text"], input[type="email"] {
     width: 100%;
     padding: 10px 12px;
-    background: var(--panel);
+    background: #ffffff;
     border: 1px solid var(--border);
     border-radius: 6px;
     color: var(--text);
@@ -96,7 +121,7 @@
   }
   button {
     background: var(--accent);
-    color: #1a1306;
+    color: var(--accent-text);
     border: none;
     padding: 14px 18px;
     font-size: 1rem;
@@ -104,7 +129,7 @@
     border-radius: 6px;
     cursor: pointer;
   }
-  button:focus { outline: 2px solid #fff; outline-offset: 2px; }
+  button:focus { outline: 2px solid var(--text); outline-offset: 2px; }
   button:hover { opacity: 0.92; }
   footer {
     margin-top: 36px;
@@ -115,6 +140,11 @@
 </head>
 <body>
 <div class="wrap">
+
+  <div class="brand">
+    <span class="brand-mark">Zone<span>Appeal</span></span>
+  </div>
+  <p class="brand-tagline">CAZ &amp; ULEZ fine case checks</p>
 
   <h1>Free CAZ / ULEZ Case Check</h1>
 
