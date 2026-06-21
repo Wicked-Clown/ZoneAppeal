@@ -172,28 +172,28 @@
   <div class="brand">Zone<span>Appeal</span></div>
 
   <h1>Find out if your CAZ or ULEZ fine can be challenged</h1>
-  <p class="sub">Takes 30 seconds. No payment or card details needed.</p>
+  <p class="sub">Answer one question and I'll tell you whether your case has recognised appeal grounds — payment disputes, unclear signage, cloned plates, road diversions, or council errors. Takes 30 seconds. No payment or card details needed.</p>
 
   <!-- STEP 1 -->
   <div id="step1">
     <div class="cards">
 
-      <button type="button" class="card" onclick="selectSituation(this, 'strong', 'I think I was wrongly fined')">
+      <button type="button" class="card" onclick="selectSituation(this, 'strong', 'I think I was wrongly fined'); gtag('event', 'card_click', {'card': 'wrongly_fined'});">
         <span class="card-icon">🚫</span>
         <span>I think I was wrongly fined</span>
       </button>
 
-      <button type="button" class="card" onclick="selectSituation(this, 'strong', 'I believe I already paid or complied')">
+      <button type="button" class="card" onclick="selectSituation(this, 'strong', 'I believe I already paid or complied'); gtag('event', 'card_click', {'card': 'already_paid'});">
         <span class="card-icon">✅</span>
         <span>I believe I already paid or complied</span>
       </button>
 
-      <button type="button" class="card" onclick="selectSituation(this, 'strong', 'There was an error — signage, admin, or my plate was cloned')">
+      <button type="button" class="card" onclick="selectSituation(this, 'strong', 'There was an error — signage, admin, or my plate was cloned'); gtag('event', 'card_click', {'card': 'error_signage_cloned'});">
         <span class="card-icon">⚠️</span>
         <span>There was an error — signage, admin, or my plate was cloned</span>
       </button>
 
-      <button type="button" class="card" onclick="selectSituation(this, 'amber', 'I didn\'t realise I was in a charge zone')">
+      <button type="button" class="card" onclick="selectSituation(this, 'amber', 'I didn\'t realise I was in a charge zone'); gtag('event', 'card_click', {'card': 'didnt_realise'});">
         <span class="card-icon">😬</span>
         <span>I didn't realise I was in a charge zone</span>
       </button>
